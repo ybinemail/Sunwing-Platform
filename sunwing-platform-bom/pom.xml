@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>${project.artifactId}</name>
+    <groupId>com.sunwing.platform</groupId>
+    <artifactId>sunwing-platform-bom</artifactId>
+    <version>${sunwing.project.version}</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!-- mysql数据库驱动 -->
+        <mysql.connector.version>8.0.17</mysql.connector.version>
+        <!-- postgresql数据库驱动 -->
+        <postgresql.connector.version>9.1-901.jdbc4</postgresql.connector.version>
+        <!-- 数据库连接池Druid -->
+        <druid.version>1.1.23</druid.version>
+        <!-- Mybatis Plus增强工具 -->
+        <mybatis.plus.version>3.4.0</mybatis.plus.version>
+
+        <!-- sunwing项目统一设置版本号 -->
+        <sunwing.project.version>1.0-SNAPSHOT</sunwing.project.version>
+
+        <!-- mysql数据库驱动 -->
+        <mysql.connector.version>8.0.17</mysql.connector.version>
+        <!-- postgresql数据库驱动 -->
+        <postgresql.connector.version>9.1-901.jdbc4</postgresql.connector.version>
+        <!-- 数据库连接池Druid -->
+        <druid.version>1.1.23</druid.version>
+        <!-- Mybatis Plus增强工具 -->
+        <mybatis.plus.version>3.4.0</mybatis.plus.version>
+
+        <!-- Knife4j Swagger2文档 -->
+        <knife4j.version>3.0.1</knife4j.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- sunwing数据库驱动及连接池 -->
+            <dependency>
+                <groupId>com.sunwing.platform</groupId>
+                <artifactId>sunwing-platform-db</artifactId>
+                <version>${sunwing.project.version}</version>
+            </dependency>
+            <!-- sunwing mybatis-plus -->
+            <dependency>
+                <groupId>com.sunwing.platform</groupId>
+                <artifactId>sunwing-platform-mybatis</artifactId>
+                <version>${sunwing.project.version}</version>
+            </dependency>
+
+            <!-- mysql数据库驱动 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+            <!-- 数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!-- Mybatis Plus增强工具 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+            <!-- Swagger2 knife4j bom方式引入 -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-dependencies</artifactId>
+                <version>${knife4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>

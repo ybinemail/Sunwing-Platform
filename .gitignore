@@ -1,0 +1,4 @@
+# Project exclude paths
+/sunwing-platform-db/target/
+/sunwing-platform-mybatis/target/
+/sunwing-platform-swagger/target/
