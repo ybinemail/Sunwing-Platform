@@ -13,6 +13,7 @@
         <module>sunwing-platform-mybatis</module>
         <module>sunwing-platform-bom</module>
         <module>sunwing-platform-swagger</module>
+        <module>sunwing-platform-boot</module>
     </modules>
 
     <properties>
@@ -37,6 +38,11 @@
     </properties>
 
     <dependencies>
+        <!-- Lombok 通过简单注解消除冗长代码  -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>

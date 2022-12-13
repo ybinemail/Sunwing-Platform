@@ -45,10 +45,26 @@
                 <artifactId>sunwing-platform-db</artifactId>
                 <version>${sunwing.project.version}</version>
             </dependency>
+
             <!-- sunwing mybatis-plus -->
             <dependency>
                 <groupId>com.sunwing.platform</groupId>
                 <artifactId>sunwing-platform-mybatis</artifactId>
+                <version>${sunwing.project.version}</version>
+            </dependency>
+
+            <!-- sunwing platform swagger -->
+            <dependency>
+                <groupId>com.sunwing.platform</groupId>
+                <artifactId>sunwing-platform-swagger</artifactId>
+                <version>${sunwing.project.version}</version>
+            </dependency>
+
+
+            <!-- sunwing platform boot -->
+            <dependency>
+                <groupId>com.sunwing.platform</groupId>
+                <artifactId>sunwing-platform-boot</artifactId>
                 <version>${sunwing.project.version}</version>
             </dependency>
 
@@ -58,6 +74,7 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.connector.version}</version>
             </dependency>
+
             <!-- 数据库连接池 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -70,7 +87,6 @@
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus.version}</version>
             </dependency>
-
             <!-- Swagger2 knife4j bom方式引入 -->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
