@@ -20,10 +20,8 @@
         <druid.version>1.1.23</druid.version>
         <!-- Mybatis Plus增强工具 -->
         <mybatis.plus.version>3.4.0</mybatis.plus.version>
-
         <!-- sunwing项目统一设置版本号 -->
         <sunwing.project.version>1.0-SNAPSHOT</sunwing.project.version>
-
         <!-- mysql数据库驱动 -->
         <mysql.connector.version>8.0.17</mysql.connector.version>
         <!-- postgresql数据库驱动 -->
@@ -32,9 +30,10 @@
         <druid.version>1.1.23</druid.version>
         <!-- Mybatis Plus增强工具 -->
         <mybatis.plus.version>3.4.0</mybatis.plus.version>
-
         <!-- Knife4j Swagger2文档 -->
         <knife4j.version>3.0.1</knife4j.version>
+        <!-- Spring Cloud Alibaba -->
+        <spring.cloud.alibaba>2.2.3.RELEASE</spring.cloud.alibaba>
     </properties>
 
     <dependencyManagement>
@@ -60,11 +59,17 @@
                 <version>${sunwing.project.version}</version>
             </dependency>
 
-
             <!-- sunwing platform boot -->
             <dependency>
                 <groupId>com.sunwing.platform</groupId>
                 <artifactId>sunwing-platform-boot</artifactId>
+                <version>${sunwing.project.version}</version>
+            </dependency>
+
+            <!-- sunwing platform cloud -->
+            <dependency>
+                <groupId>com.sunwing.platform</groupId>
+                <artifactId>sunwing-platform-cloud</artifactId>
                 <version>${sunwing.project.version}</version>
             </dependency>
 
@@ -81,17 +86,28 @@
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
             </dependency>
+
             <!-- Mybatis Plus增强工具 -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus.version}</version>
             </dependency>
+
             <!-- Swagger2 knife4j bom方式引入 -->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-dependencies</artifactId>
                 <version>${knife4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Spring Cloud Alibaba -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

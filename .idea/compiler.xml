@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="sunwing-platform-cloud" />
         <module name="sunwing-platform-boot" />
         <module name="sunwing-platform-swagger" />
         <module name="sunwing-platform-db" />
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Sunwing-Platform" options="" />
       <module name="sunwing-platform-boot" options="-parameters" />
+      <module name="sunwing-platform-cloud" options="-parameters" />
       <module name="sunwing-platform-db" options="-parameters" />
       <module name="sunwing-platform-mybatis" options="-parameters" />
       <module name="sunwing-platform-swagger" options="-parameters" />

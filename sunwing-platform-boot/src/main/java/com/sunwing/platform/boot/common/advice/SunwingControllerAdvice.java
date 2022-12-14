@@ -117,6 +117,9 @@ public class SunwingControllerAdvice {
      * @param exception
      * @return
      */
+    @ExceptionHandler(value = {
+            MethodArgumentNotValidException.class
+    })
     public Result handlerMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
         StringBuffer stringBuffer = new StringBuffer();
         exception.getBindingResult().getFieldErrors().stream()
@@ -132,6 +135,9 @@ public class SunwingControllerAdvice {
      * @param exception
      * @return
      */
+    @ExceptionHandler(value = {
+            ConstraintViolationException.class
+    })
     public Result handlerConstraintViolationException(ConstraintViolationException exception){
         String errorMessage = exception.getLocalizedMessage();
         Result result = Result.error(ResultCodeEnum.PARAM_VALID_ERROR, errorSystem + errorMessage);
@@ -143,12 +149,18 @@ public class SunwingControllerAdvice {
      * @param exception
      * @return
      */
+    @ExceptionHandler(value = {
+            BusinessException.class
+    })
     public Result handlerCustomException(BusinessException exception){
         String errorMessage = exception.getMsg();
         Result result = Result.error(exception.getCode(), errorSystem + errorMessage);
         return  result;
     }
 
+    @ExceptionHandler(value = {
+            SystemException.class
+    })
     public Result handlerSystemException(SystemException exception){
         String errorMessage = exception.getMsg();
         Result result = Result.error(exception.getCode(),errorSystem + errorMessage);

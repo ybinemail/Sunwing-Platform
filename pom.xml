@@ -14,6 +14,7 @@
         <module>sunwing-platform-bom</module>
         <module>sunwing-platform-swagger</module>
         <module>sunwing-platform-boot</module>
+        <module>sunwing-platform-cloud</module>
     </modules>
 
     <properties>

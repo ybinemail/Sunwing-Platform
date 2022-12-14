@@ -10,9 +10,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>sunwing-platform-swagger</artifactId>
-  <version>${project.parent.version}</version>
   <name>sunwing-platform-swagger</name>
   <packaging>jar</packaging>
+  <version>${project.parent.version}</version>
 
   <dependencies>
     <dependency>
