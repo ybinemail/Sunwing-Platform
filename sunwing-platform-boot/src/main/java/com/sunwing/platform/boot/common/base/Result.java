@@ -22,6 +22,10 @@ public class Result<T> {
     @ApiModelProperty(value = "响应数据")
     private T data;
 
+    private Result(){
+
+    }
+
     private Result(int code, String msg, T data){
         this.success = ResultCodeEnum.SUCCESS.code == code;
         this.code = code;
